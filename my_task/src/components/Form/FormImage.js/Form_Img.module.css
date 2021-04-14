@@ -1,0 +1,41 @@
+
+.main__div{
+    position: relative;
+    
+}
+
+.form__img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.icon__button{
+    position: absolute;
+    float: right;
+    margin-top: -10rem;
+}
+
+.icon__style{
+    border-radius: 50%;
+    background-color: white;
+    font-size: 2rem;
+}
+
+.logo__style{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    left: 10%;
+    
+}
+
+.logo__icon{
+    margin:90px 30px 10px -5px;
+    background-color: white;
+    border-radius: 50%;
+}

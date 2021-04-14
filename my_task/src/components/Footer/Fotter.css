@@ -1,0 +1,14 @@
+
+.footer__style{
+    position: absolute;
+    top:100%;
+    width:100%;
+    margin-top: 500px;
+}
+
+@media(max-width: 768px){
+    .footer__style{
+       
+        margin-top: 700px;
+    }
+}

@@ -1,0 +1,30 @@
+
+.main__div{
+    margin-top: 9rem;
+    
+}
+
+.paper__style{
+    
+}
+
+.input__style{
+    position: absolute;
+    top: 70%;
+    width: 90%;
+}
+
+.benefits{
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefit__button{
+    border: 1px solid black ;
+    border-radius: 30px;
+    padding: 7px 20px;
+}
+
+.skip__button{
+    border:1px solid black
+}
