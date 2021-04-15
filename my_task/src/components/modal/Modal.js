@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -8,10 +8,12 @@ import MuiDialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
-import { Container } from "react-bootstrap";
-import { Paper } from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
-import buttonData from "../Form/FakeData";
+import WifiTetheringIcon from "@material-ui/icons/WifiTethering";
+import CreateIcon from "@material-ui/icons/Create";
+import DeleteIcon from "@material-ui/icons/Delete";
+import DragIndicatorIcon from "@material-ui/icons/DragIndicator";
+import { Modal_Form } from "./modal form";
+import Add_Benefit from "./add_benefit/Add_Benefit";
 
 const styles = (theme) => ({
   root: {
@@ -81,57 +83,71 @@ export default function CustomizedDialogs() {
           </Typography>
         </DialogTitle>
         <DialogContent dividers>
-          <Container>
-            <Paper className="p-3" style={{ background: "#6666" }}>
-              <Typography>Choose benefit to add</Typography>
+          <Add_Benefit />
+          <Typography
+            className="my-3"
+            variant="h6"
+            style={{ color: "#F15A29" }}
+          >
+            Benefits
+          </Typography>
+          <div
+            style={{
+              background: "#F3ECDD",
+              boxShadow: "0px 0px 3px 0px",
+              margin: "10px",
+            }}
+            className="d-flex justify-content-evenly align-align-items-center border p-2  rounded"
+          >
+            <WifiTetheringIcon
+              className="m-3"
+              style={{
+                color: "#F15A29",
+                borderRadius: "30px",
+                boxShadow: "0px 0px 10px 8px #F15A29",
+              }}
+            />
+            <div className=" d-flex justify-content-between align-items-center">
               <div className="">
-                {buttonData.map((val) => {
-                  return (
-                    <Button
-                      style={{
-                        color: "black",
-                        background: "white",
-                        borderRadius: "30px",
-                        margin:"3px"
-                      }}
-                      variant="contained"
-                      endIcon={
-                        <AddIcon
-                          style={{
-                            color: "white",
-                            background: "#F15A29",
-                            borderRadius: "30px",
-                          }}
-                        />
-                      }
-                    >
-                      {val.text}
-                    </Button>
-                  );
-                })}
+                <Typography style={{ color: "#F15A29" }} variant="subtitle1">
+                  Excellent Health Care
+                </Typography>
+                <Typography variant="subtitle2">
+                  We offer a comprehensive Benefits Package that includes
+                  Medical, dental, and vision coverage
+                </Typography>
               </div>
-            </Paper>
-          </Container>
+              <div className="d-flex">
+                <CreateIcon />
+                <DeleteIcon />
+                <DragIndicatorIcon />
+              </div>
+            </div>
+          </div>
 
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography>
+          <br />
+          <br />
+          <Modal_Form />
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose} color="primary">
-            Save changes
+          <Button
+            className="px-4"
+            variant="outlined"
+            style={{
+              borderRadius: "30px",
+              border: "1px solid #2D3E8B",
+              color: "#2D3E8B",
+            }}
+          >
+            Back
+          </Button>
+          <Button
+            className="px-4"
+            variant="contained"
+            color="primary"
+            style={{ borderRadius: "30px" }}
+          >
+            Save
           </Button>
         </DialogActions>
       </Dialog>
