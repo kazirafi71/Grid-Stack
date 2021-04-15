@@ -8,7 +8,7 @@ import {Footer} from './components/Footer';
 function App() {
   return (
     <BrowserRouter>
-      <NavigationBar/>
+      <NavigationBar/>      
       <Input_Form/>
       <Footer/>
     </BrowserRouter>

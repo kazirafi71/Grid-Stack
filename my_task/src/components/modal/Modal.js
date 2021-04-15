@@ -60,7 +60,7 @@ const DialogActions = withStyles((theme) => ({
 }))(MuiDialogActions);
 
 export default function CustomizedDialogs() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] =useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -71,7 +71,7 @@ export default function CustomizedDialogs() {
 
   return (
     <div>
-      <Button onClick={handleClickOpen}>Add Benefits</Button>
+      <Button  onClick={handleClickOpen}>Add Benefits</Button>
       <Dialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
@@ -131,6 +131,7 @@ export default function CustomizedDialogs() {
         </DialogContent>
         <DialogActions>
           <Button
+          onClick={handleClose}
             className="px-4"
             variant="outlined"
             style={{

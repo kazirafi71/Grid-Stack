@@ -1,41 +1,78 @@
 
-.main__div{
-    position: relative;
-    
+
+
+.bg_img{
+  background-image: url('../../assets/images/Mask\ Group\ 4.png') ;
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  border-top-right-radius: 7px;
 }
 
-.form__img{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+.icon__button {
+  position: absolute;
+  float: right;
+  margin-top: -10rem;
+
 }
 
-.icon__button{
-    position: absolute;
-    float: right;
-    margin-top: -10rem;
+.icon__style {
+  border-radius: 50%;
+  background-color: white;
 }
 
-.icon__style{
-    border-radius: 50%;
-    background-color: white;
-    font-size: 2rem;
+.logo{
+  position: absolute;
+  margin-top: -3rem;
 }
 
-.logo__style{
-    position: absolute;
+.logo__style {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+
+  
+}
+
+.logo__icon {
+  margin: 20px 30px 10px -13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+
+
+
+
+@media screen and (max-width: 1440px){
+  .logo__style {
     top: 50%;
     transform: translateY(-30%);
     left: 10%;
-    
+  }
 }
 
-.logo__icon{
-    margin:90px 30px 10px -5px;
-    background-color: white;
-    border-radius: 50%;
+
+
+@media screen and (max-width: 768px){
+  .logo__style {
+    top: 50%;
+    transform: translateY(-80%);
+    left: 5%;
+  }
+}
+
+
+
+@media screen and (max-width: 480px){
+  .logo__style {
+    
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0%;
+    
+  }
 }

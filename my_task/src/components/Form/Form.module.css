@@ -1,30 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-.main__div{
-    margin-top: 9rem;
-    
+.paper__style {
+  padding: 40px;
+  margin-bottom: 50px;
+  font-family: 'Lora';
+
+
 }
 
-.paper__style{
-    
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
 }
 
-.input__style{
-    position: absolute;
-    top: 70%;
-    width: 90%;
+.benefit__button {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 7px 20px;
 }
 
-.benefits{
-    display: flex;
-    justify-content: space-between;
-}
-
-.benefit__button{
-    border: 1px solid black ;
-    border-radius: 30px;
-    padding: 7px 20px;
-}
-
-.skip__button{
-    border:1px solid black
+.skip__button {
+  border: 1px solid black;
 }

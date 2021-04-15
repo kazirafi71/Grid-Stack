@@ -11,9 +11,7 @@ const Modal_Form = () => {
       ]);
     
       const [title, setTitle] = useState("");
-      const [des, setDes] = useState("");
-      // console.log(title, des)
-    
+      const [des, setDes] = useState("");    
       const handleFormData = (e) => {
         e.preventDefault();
         setFormData([...formData, { title: title, des: des }]);

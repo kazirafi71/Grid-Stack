@@ -7,11 +7,13 @@ const NavigationBar = () => {
   return (
     <>
       <Navbar
+      
         fixed="top"
-        className={styles.nav__style}
+        className='shadow-sm'
         collapseOnSelect
         expand="sm"
         bg="light"
+        
       >
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -28,6 +30,7 @@ const NavigationBar = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <br/> <br/> <br/><br/> <br/>
     </>
   );
 };

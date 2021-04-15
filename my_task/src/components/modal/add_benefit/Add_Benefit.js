@@ -12,7 +12,7 @@ const Add_Benefit = () => {
               <div className="">
                 {buttonData.map((val) => {
                   return (
-                    <Button
+                    <Button key={val.text}
                       variant="outlined"
                       style={{
                         color: "black",
