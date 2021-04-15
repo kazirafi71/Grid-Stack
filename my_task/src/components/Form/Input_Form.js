@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container, Paper } from "@material-ui/core";
 import { FormImg } from "./FormImage.js";
 import styles from "./Form.module.css";
@@ -9,10 +9,24 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import SendIcon from "@material-ui/icons/Send";
 import WifiTetheringIcon from "@material-ui/icons/WifiTethering";
 import CustomizedDialogs from "../modal/Modal.js";
+import HomeIcon from "@material-ui/icons/Home";
+import EqualizerIcon from "@material-ui/icons/Equalizer";
+import SettingsIcon from "@material-ui/icons/Settings";
+import EmojiObjectsIcon from "@material-ui/icons/EmojiObjects";
+import LocalFloristIcon from "@material-ui/icons/LocalFlorist";
 
 const Input_Form = () => {
+  const [btn, setBtn] = useState(false);
+
+  const buttonClickHandler = () => {
+    if (btn) {
+      setBtn(false);
+    } else {
+      setBtn(true);
+    }
+  };
   return (
-    <div className=''>
+    <div className="">
       <FormImg />
       <div className={`container  ${styles.main__div}`}>
         <Paper className={styles.paper__style}>
@@ -87,9 +101,8 @@ const Input_Form = () => {
                     color: "white",
                     background: "#F77631",
                     borderRadius: "30px",
-                    
                   }}
-                  variant="contained"
+                  variant="outlined"
                   startIcon={<WifiTetheringIcon />}
                   endIcon={<CheckCircleIcon />}
                 >
@@ -98,9 +111,9 @@ const Input_Form = () => {
               </div>
               <div className="col-sm-6 col-md-4 p-2">
                 <Button
-                  style={{ color: "black", borderRadius: "30px",  }}
-                  variant="contained"
-                  startIcon={<WifiTetheringIcon />}
+                  style={{ color: "black", borderRadius: "30px" }}
+                  variant="outlined"
+                  startIcon={<HomeIcon />}
                   endIcon={<RadioButtonUncheckedIcon />}
                 >
                   Daily Snacks
@@ -108,19 +121,19 @@ const Input_Form = () => {
               </div>
               <div className="col-sm-6 col-md-4 p-2">
                 <Button
-                  style={{ color: "black", borderRadius: "30px", }}
-                  variant="contained"
-                  startIcon={<WifiTetheringIcon />}
+                  style={{ color: "black", borderRadius: "30px" }}
+                  variant="outlined"
+                  startIcon={<EqualizerIcon />}
                   endIcon={<RadioButtonUncheckedIcon />}
                 >
-                 Group Activities
+                  Group Activities
                 </Button>
               </div>
               <div className="col-sm-6 col-md-4 p-2">
                 <Button
-                  style={{ color: "black", borderRadius: "30px",}}
-                  variant="contained"
-                  startIcon={<WifiTetheringIcon />}
+                  style={{ color: "black", borderRadius: "30px" }}
+                  variant="outlined"
+                  startIcon={<SettingsIcon />}
                   endIcon={<RadioButtonUncheckedIcon />}
                 >
                   Volunteer Opportunities
@@ -128,9 +141,10 @@ const Input_Form = () => {
               </div>
               <div className="col-sm-6 col-md-4 p-2 ">
                 <Button
-                  style={{ color: "black", borderRadius: "30px",  }}
-                  variant="contained"
-                  startIcon={<WifiTetheringIcon />}
+                  onClick={buttonClickHandler}
+                  style={{ color: "black", borderRadius: "30px" }}
+                  variant="outlined"
+                  startIcon={<EmojiObjectsIcon />}
                   endIcon={<RadioButtonUncheckedIcon />}
                 >
                   Wellness Programs
@@ -138,9 +152,9 @@ const Input_Form = () => {
               </div>
               <div className="col-sm-6 col-md-4 p-2">
                 <Button
-                  style={{ color: "black", borderRadius: "30px", }}
-                  variant="contained"
-                  startIcon={<WifiTetheringIcon />}
+                  style={{ color: "black", borderRadius: "30px" }}
+                  variant="outlined"
+                  startIcon={<LocalFloristIcon />}
                   endIcon={<RadioButtonUncheckedIcon />}
                 >
                   Paid time off
@@ -149,7 +163,7 @@ const Input_Form = () => {
             </div>
             <div className="my-4 text-right">
               <Button
-                className="border px-2 mx-5"
+                className="border px-4 mx-2"
                 style={{ color: "black", borderRadius: "30px" }}
               >
                 Skip

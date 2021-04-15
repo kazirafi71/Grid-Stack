@@ -47,10 +47,10 @@
 
 
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1600px){
   .logo__style {
-    top: 50%;
-    transform: translateY(-30%);
+    top: 45%;
+
     left: 10%;
   }
 }
@@ -69,10 +69,7 @@
 
 @media screen and (max-width: 480px){
   .logo__style {
-    
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0%;
-    
+    top: 55%;
+    transform: translateY(-55%);
   }
 }
